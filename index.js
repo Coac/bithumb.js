@@ -9,16 +9,10 @@ class Bithumb {
     this.API_URL = 'https://api.bithumb.com/'
   }
 
-  _public (endpoint, parameters) {
-    let httpParam = '/'
-    for (let key in parameters) {
-      if (parameters[key]) {
-        httpParam += parameters[key] + '/'
-      }
-    }
+  _public (endpoint, parameter) {
     const options = {
       method: 'GET',
-      uri: this.API_URL + endpoint + httpParam,
+      uri: this.API_URL + endpoint + '/' + parameter,
       json: true
     }
 
@@ -26,7 +20,15 @@ class Bithumb {
   }
 
   async getTicker (currency) {
-    return this._public('public/ticker', {currency})
+    return this._public('public/ticker', currency)
+  }
+
+  async getOrderbook (currency) {
+    return this._public('public/orderbook', currency)
+  }
+
+  async getRecentTransactions (currency) {
+    return this._public('public/recent_transactions', currency)
   }
 
   _private (endpoint, parameters) {
