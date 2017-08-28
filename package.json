@@ -1,0 +1,36 @@
+{
+  "name": "bithumb.js",
+  "version": "1.0.0",
+  "description": "Bithumb exchange api wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coac/bithumb.js.git"
+  },
+  "keywords": [
+    "bithumb",
+    "exchange",
+    "api",
+    "wrapper"
+  ],
+  "author": "Victor Le",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Coac/bithumb.js/issues"
+  },
+  "homepage": "https://github.com/Coac/bithumb.js#readme",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "eslint": "^4.5.0",
+    "eslint-config-standard": "^10.2.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "nonce": "^1.0.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
