@@ -75,8 +75,59 @@ class Bithumb {
     return rp(options)
   }
 
+  async getAccountInfo (currency) {
+    return this._private('/info/account', {currency})
+  }
   async getBalance (currency) {
     return this._private('/info/balance', {currency})
+  }
+
+  async getWalletAddress (currency) {
+    return this._private('/info/wallet_address', {currency})
+  }
+
+  async getAccountLastTrades (order_currency) {
+    return this._private('/info/ticker', {order_currency})
+  }
+
+  async getOpenOrders (order_id, type, count, after, currency) {
+    return this._private('/info/orders', {order_id, type, count, after, currency})
+  }
+
+  async getAccountTradeHistory (offset, count, searchGb, currency) {
+    return this._private('/info/user_transactions', {offset, count, searchGb, currency})
+  }
+
+  async placeOrder (order_currency, Payment_currency, units, price, type, misu) {
+    return this._private('/trade/place', {order_currency, Payment_currency, units, price, type, misu})
+  }
+
+  async getOrderDetail (order_id, type, currency) {
+    return this._private('/info/order_detail', {order_id, type, currency})
+  }
+
+  async cancelOrder (order_id, type, currency) {
+    return this._private('/info/order_detail', {order_id, type, currency})
+  }
+
+  async btcWithdrawal (units, address, destination, currency) {
+    return this._private('/trade/btc_withdrawal', {units, address, destination, currency})
+  }
+
+  async krwDeposit () {
+    return this._private('/trade/krw_deposit')
+  }
+
+  async krwWithdrawal (bank, account, price) {
+    return this._private('/trade/krw_withdrawal', {bank, account, price})
+  }
+
+  async marketBuy (units, currency) {
+    return this._private('/trade/market_buy', {units, currency})
+  }
+
+  async marketSell (units, currency) {
+    return this._private('/trade/market_sell', {units, currency})
   }
 }
 
