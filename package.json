@@ -4,7 +4,8 @@
   "description": "Bithumb exchange api wrapper",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
