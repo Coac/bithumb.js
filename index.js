@@ -86,8 +86,8 @@ class Bithumb {
     return this._private('/info/wallet_address', {currency})
   }
 
-  async getAccountLastTrades (order_currency) {
-    return this._private('/info/ticker', {order_currency})
+  async getAccountLastTrades (order_currency, payment_currency) {
+    return this._private('/info/ticker', {order_currency, payment_currency})
   }
 
   async getOpenOrders (order_id, type, count, after, currency) {
