@@ -107,7 +107,7 @@ class Bithumb {
   }
 
   async cancelOrder (order_id, type, currency) {
-    return this._private('/info/order_detail', {order_id, type, currency})
+    return this._private('/trade/cancel', {order_id, type, currency})
   }
 
   async btcWithdrawal (units, address, destination, currency) {
