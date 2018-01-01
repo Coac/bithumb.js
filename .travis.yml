@@ -10,7 +10,7 @@ addons:
       - yarn
 language: node_js
 node_js:
-    - 7
+    - node
 install:
     - yarn
     - yarn add eslint
