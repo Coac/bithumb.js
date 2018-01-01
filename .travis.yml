@@ -18,6 +18,8 @@ install:
     - yarn add eslint-config-standard
     - yarn add standard
     - yarn add eslint-plugin-node
+    - yarn add eslint-plugin-promise
+    - yarn add eslint-plugin-standard
 script:
     - yarn run lint
     - yarn test
