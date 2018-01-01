@@ -15,6 +15,9 @@ install:
     - yarn
     - yarn add eslint
     - yarn add eslint-plugin-import
+    - yarn add eslint-config-standard
+    - yarn add standard
+    - yarn add eslint-plugin-node
 script:
     - yarn run lint
     - yarn test
