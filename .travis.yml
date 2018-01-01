@@ -14,6 +14,7 @@ node_js:
 install:
     - yarn
     - yarn add eslint
+    - yarn add eslint-plugin-import
 script:
     - yarn run lint
     - yarn test
